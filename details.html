@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Search Engine</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <!-- locomotive-scroll -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <!-- Main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- Material Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <!-- Bootstrap 5 Beta -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div data-scroll-container>
+      <div class="section" data-scroll-section>
+        <div class="main-container">
+          <div class="details-header">
+            <h1 class="details-header-title"></h1>
+            <div class="img-wrap"></div>
+            <div class="rating-box"><h5 class="rating"></h5></div>
+          </div>
+
+          <div class="genre"></div>
+
+          <div class="container details">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="card details">
+                  <div class="card-body">
+                    <h5 class="card-title">Overview</h5>
+                    <p class="card-text" id="overview"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card details">
+                  <div class="card-body">
+                    <h5 class="card-title">Release Date</h5>
+                    <p class="card-text" id="release"></p>
+                  </div>
+                </div>
+                <div class="card details">
+                  <div class="card-body">
+                    <h5 class="card-title">Budget</h5>
+                    <p class="card-text" id="budget"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="closeWindow" onclick="self.close()">
+      <span class="material-icons"> highlight_off </span>
+    </button>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- locomotive-scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <!-- Config JS-->
+    <script src="./js/config.js"></script>
+    <!-- Details JS-->
+    <script src="./js/details.js"></script>
+    <script>
+      // Init Locomotive Scroll
+      const scroller = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Search Engine</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+    <!-- locomotive-scroll -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <!-- Main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- Material Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <!-- Bootstrap 5 Beta -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div class="intro">
+      <div class="camera__wrap">
+    <div class="camera__body">
+      <div class="camera__body-k7">
+        <div class="tape">
+          <div class="roll"></div>
+          <div class="roll"></div>
+          <div class="roll"></div>
+          <div class="roll"></div>
+          <div class="center"></div>
+        </div>
+        <div class="tape">
+          <div class="roll"></div>
+          <div class="roll"></div>
+          <div class="roll"></div>
+          <div class="roll"></div>
+          <div class="center"></div>
+        </div>
+      </div>
+      <div class="camera__body__stuff">
+        <div class="camera__body__stuff-bat"></div>
+        <div class="camera__body__stuff-pointer first"></div>
+        <div class="camera__body__stuff-pointer"></div>
+      </div>
+    </div>
+    <div class="camera__body-optic"></div>
+    <div class="camera__body-light"></div>
+  </div>
+</div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-wrap">
+        <h1 class="logo">M<span>o</span>vies</h1>
+      </div>
+    </nav>
+
+    <div class="up">
+      <span class="material-icons"> keyboard_arrow_up </span>
+    </div>
+
+    <div data-scroll-container>
+      <div class="section" data-scroll-section>
+        <div>
+          <div class="main-container">
+            <div class="select">
+              <div id="search-wrap">
+                <label>Search for something you like</label>
+                <input
+                  maxlength="15"
+                  type="text"
+                  id="search"
+                  autocomplete="off"
+                  placeholder="Min. 3 characters"
+                />
+                <button id="clear">
+                  <span class="material-icons">clear</span>
+                </button>
+              </div>
+              <div class="options">
+                <button id="movies" class="option active">Movies</button>
+                <button id="series" class="option">Series</button>
+              </div>
+            </div>
+            <h2 class="main-title">Trending Movies</h2>
+            <div class="container">
+              <div class="card-deck">
+                <div
+                  class="row row-cols-1 row-cols-md-3 row-cols-sm-2"
+                  id="output"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- locomotive-scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <!-- Config JS-->
+    <script src="./js/config.js"></script>
+    <!-- Search Functions -->
+    <script src="./js/search.js"></script>
+    <!-- Trending Functions -->
+    <script src="./js/trending.js"></script>
+    <!-- Main JS-->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
