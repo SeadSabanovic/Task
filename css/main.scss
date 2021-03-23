@@ -245,7 +245,7 @@ body {
       font-size: 30px;
       font-family: $font-title;
       margin: 0 !important;
-      cursor: pointer;
+      cursor: unset;
 
       span {
         color: $second;
@@ -371,6 +371,10 @@ body {
         border-top-left-radius: 10px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         transition: $t1;
+        -webkit-user-select: text; /* Chrome, Opera, Safari */
+        -moz-user-select: text; /* Firefox 2+ */
+        -ms-user-select: text; /* IE 10+ */
+        user-select: text; /* Standard syntax */
 
         &:focus {
           box-shadow: 0 3px 6px rgba($second, 0.16),

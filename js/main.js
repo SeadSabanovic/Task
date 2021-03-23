@@ -38,8 +38,10 @@ $(document).ready(() => {
 
   // Start observing the target node for configured mutations
   observer.observe(targetNode, config);
+
   // Intro Fade
   $(".intro").fadeOut(1500);
+  
   // Nav & Up Button Toggle
   scroller.on("scroll", (position) => {
     if (position.scroll.y > 0) {
@@ -103,38 +105,9 @@ $(document).ready(() => {
       displayTrending();
     }
   });
-
-  // Select Movies / Series
-  movies.click(() => {
-    if (option === "movie") {
-      return false;
-    } else if (searchToggle) {
-      option = "movie";
-      value = search.val();
-      fetchSearch(value);
-    } else {
-      option = "movie";
-      displayTrending();
-    }
-  });
-  series.click(() => {
-    if (option === "tv") {
-      return false;
-    } else if (searchToggle) {
-      option = "tv";
-      value = search.val();
-      fetchSearch(value);
-    } else {
-      option = "tv";
-      displayTrending();
-    }
-  });
-
-  $("#nextPage").click(() => {
-    nextPage();
-  });
 });
 
+// Fallback Up button functionality on mobile 
 $(window).scroll(function () {
   var scrollbarLocation = $(this).scrollTop();
 
